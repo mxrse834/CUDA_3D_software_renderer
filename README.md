@@ -100,8 +100,6 @@ A future version will separate the pipeline into more appropriate stages, for ex
 4. rasterize the 12 edges in parallel;
 5. later move toward triangle rasterization, clipping, and depth testing.
 
-The timing code is also still experimental: CUDA events are currently created per frame and will be moved into persistent renderer state so that the same events can be reused.
-
 ## Timing
 
 Three parts of a frame are measured independently:
@@ -166,7 +164,6 @@ Makefile        Configurable build, run and clean targets
 
 ## Planned work
 
-- reuse CUDA timing events across frames;
 - remove redundant per-pixel geometry work;
 - separate transformation and rasterization stages;
 - support rotation around multiple axes;
